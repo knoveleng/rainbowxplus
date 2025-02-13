@@ -73,10 +73,10 @@ class EvaluationProcessor:
             )
             res = self.llm.generate(query, self.sampling_params)
 
-            eval_prompts.add(key, chosen_prompt)
-            eval_responses.add(key, chosen_response)
-            eval_scores.add(key, chosen_score)
-            judge_responses.add(key, res)
+            eval_prompts.add(key, [chosen_prompt])
+            eval_responses.add(key, [chosen_response])
+            eval_scores.add(key, [chosen_score])
+            judge_responses.add(key, [res])
 
         return {
             "eval_prompts": eval_prompts,

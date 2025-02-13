@@ -1,0 +1,17 @@
+log_dir: ./logs/mistralai/Ministral-8B-Instruct-2410/AdversarialQA
+algo: rainbowplus
+method: all
+
+judge_llm:
+  type_: vllm
+
+  model_kwargs:
+    model: meta-llama/Llama-Guard-3-8B
+    trust_remote_code: True
+    max_model_len: 4352
+    gpu_memory_utilization: 0.95
+
+  sampling_params:
+    temperature: 0.6
+    top_p: 0.9
+    max_tokens: 16

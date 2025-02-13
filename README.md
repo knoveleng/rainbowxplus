@@ -38,7 +38,16 @@ python -m rainbowxplus.rainbowxplus --config_file configs/base.yml --dataset dat
 ```
 
 ## Evaluation
-Comming soon ...
+After running the program, the results will be saved in the `./logs` directory. To evaluate, run:
+
+```bash
+python -m rainbowxplus.evaluate --config configs/eval.yml -l ./logs/model_name/dataset_name -a rainbowxplus -m method
+```
+
+where `method` is one of:
+- `all` for all scores (Standard RainbowXPlus)
+- `median` for median score (RainbowXPlus - $\alpha$)
+- `max` for max score (RainbowXPlus - $\beta$)
 
 
 ## Cite our Work
