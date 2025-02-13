@@ -1,0 +1,1 @@
+Please generate a list of attack style (as emotinonal, ...) that be used to in attacking LLM system.
